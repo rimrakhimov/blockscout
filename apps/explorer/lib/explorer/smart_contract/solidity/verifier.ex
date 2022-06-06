@@ -311,8 +311,8 @@ defmodule Explorer.SmartContract.Solidity.Verifier do
              check_users_constructor_args_validity(bc_creation_tx_input, bytecode, bc_meta, local_meta, arguments_data)) ->
         {:ok, %{abi: abi, constructor_arguments: arguments_data}}
 
-      try_library_verification(local_bytecode_without_meta, bc_creation_tx_input_without_meta) ->
-        {:ok, %{abi: abi}}
+      # try_library_verification(local_bytecode_without_meta, bc_creation_tx_input_without_meta) ->
+      #   {:ok, %{abi: abi}}
 
       true ->
         {:error, :unknown_error}
